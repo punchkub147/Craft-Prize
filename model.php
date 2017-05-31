@@ -1,0 +1,32 @@
+<?php 
+	session_start();
+
+	$userLogin = array();
+	if(!isset($_SESSION['userLogin'])){
+
+	}else{
+		$user_email = $_SESSION['userLogin'];
+		require 'connectDB.php';
+			$sql = "SELECT user_id,user_name,user_email,user_image
+	                FROM users
+	                WHERE user_email = '$user_email'
+	                LIMIT 1
+	                ";
+	        
+	        $result = $mysqli->query($sql);
+	            if ($result->num_rows > 0) {
+	                while ($get_users = $result->fetch_assoc()) {
+	                    array_push($userLogin,$get_users);
+	                }
+	            }else{
+	                //echo $sql;
+	            }
+	        $mysqli->close();
+
+	        $userLogin = $userLogin['0'];
+
+	        $user_id = $userLogin['user_id'];
+	}
+	
+	
+ ?>

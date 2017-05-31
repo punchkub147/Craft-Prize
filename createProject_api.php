@@ -6,7 +6,7 @@
 	//detail
 	$name = $_POST['name'];
 	$description = $_POST['description'];
-	$poster = $_POST['poster'];
+	//$poster = $_POST['poster'];
 	//prize
 	$prize1 = $_POST['prize1'];
 	$prize2 = $_POST['prize2'];
@@ -27,7 +27,7 @@
 	require 'connectDB.php';
 		
 	$sql = "INSERT INTO `projects`(`user_id`, `project_name`, `project_description`, `project_poster`, `category_id`, `end_at`, `prize_1st`, `prize_2nd`, `prize_3rd`) 
-			VALUES ('$user_id','$name','$description','$poster','$category','$end_at','$prize1','$prize2','$prize3')";
+			VALUES ('$user_id','$name','$description','','$category','$end_at','$prize1','$prize2','$prize3')";
 
 	if ($mysqli->query($sql) === TRUE) {
 	    //echo "Created";

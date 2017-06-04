@@ -40,6 +40,8 @@
         $pictureURL = $picture['url'];
         $userImage = $pictureURL;
 
+        $link = "https://www.facebook.com/".$id;
+
         $_SESSION['userLogin'] = $email;
 
         require 'connectDB.php';
@@ -59,6 +61,30 @@
                         ";
                         if ($mysqli->query($sql) === TRUE) {
                             //echo "Registered by Facebook";
+
+                            $sql = "SELECT user_id
+                                    FROM users
+                                    WHERE user_fb_id = '$id';
+                                    ";
+
+                            $result = $mysqli->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($get_users = $result->fetch_assoc()) {
+                                    $user_id = $get_users['user_id'];
+                                    $sql = "INSERT INTO user_contact(user_id,contact_id,contact_detail)
+                                            VALUES ('$user_id',3,'$link'),('$user_id',5,'$email')
+                                            ";
+                                    if ($mysqli->query($sql) === TRUE) {
+                                        //echo "Registered by Facebook";
+                                        
+                                    } else {
+                                        echo "Error: " . $sql . "<br>" . $mysqli->error;
+                                    }
+                                }
+                            }else{
+
+                            }
+
                         } else {
                             echo "Error: " . $sql . "<br>" . $mysqli->error;
                         }

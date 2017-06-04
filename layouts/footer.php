@@ -4,15 +4,15 @@
 		<div class="container">
 				<div class="w-12 top">
 					<div class="stat w-3">
-						<h3>651651</h3>
+						<h3>0</h3>
 						<p>Project</p>
 					</div>
 					<div class="stat w-3">
-						<h3>651651</h3>
+						<h3>0</h3>
 						<p>Designer</p>
 					</div>
 					<div class="stat w-3">
-						<h3>651651</h3>
+						<h3>0</h3>
 						<p>Prize</p>
 					</div>
 					<div class="register">
@@ -35,6 +35,11 @@
 		</div>
 
 	</footer>
+
+	<script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 </html>

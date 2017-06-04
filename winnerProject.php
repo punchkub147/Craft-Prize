@@ -28,7 +28,7 @@
 				<input type="submit" value="ค้นหา" class="btn btn-search">
 			</form>
 		</div>
-		<div class="filter w-12">
+		<div class="filter w-6">
 			<nav>
 				<ul>
 					<a href="winnerProject.php?filter=<?php echo $filter; ?>&category=" <?php if($category == "")echo "id=\"active\""; ?>class="fl"><li>All</li></a>
@@ -39,236 +39,216 @@
 			</nav>
 		</div>
 
-	<div class="row">
-			<a href="###">
-				<div class="w-3 pull">
-					<div class="item-card w-12">
-						<img src="" alt="" class="img">
-						<div class="item-description">
-							<div class="item-project">
-								<p>ตราสัญลักษณ์ โลโก้องกรณ์</p>
-							</div>
-							<div class="item-designer">
-								<p>by <a href="###">PunchilZ</a></p>
-							</div>
-						</div>
-						<div class="line"></div>
-						<div class="item-prize">
-							<h5> ฿ 30,000 </h5>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="###">
-				<div class="w-3 pull">
-					<div class="item-card w-12">
-						<img src="" alt="" class="img">
-						<div class="item-description">
-							<div class="item-project">
-								<p>ตราสัญลักษณ์ โลโก้องกรณ์</p>
-							</div>
-							<div class="item-designer">
-								<p>by <a href="###">PunchilZ</a></p>
-							</div>
-						</div>
-						<div class="line"></div>
-						<div class="item-prize">
-							<h5> ฿ 30,000 </h5>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="###">
-				<div class="w-3 pull">
-					<div class="item-card w-12">
-						<img src="" alt="" class="img">
-						<div class="item-description">
-							<div class="item-project">
-								<p>ตราสัญลักษณ์ โลโก้องกรณ์</p>
-							</div>
-							<div class="item-designer">
-								<p>by <a href="###">PunchilZ</a></p>
-							</div>
-						</div>
-						<div class="line"></div>
-						<div class="item-prize">
-							<h5> ฿ 30,000 </h5>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="###">
-				<div class="w-3 pull">
-					<div class="item-card w-12">
-						<img src="" alt="" class="img">
-						<div class="item-description">
-							<div class="item-project">
-								<p>ตราสัญลักษณ์ โลโก้องกรณ์</p>
-							</div>
-							<div class="item-designer">
-								<p>by <a href="###">PunchilZ</a></p>
-							</div>
-						</div>
-						<div class="line"></div>
-						<div class="item-prize">
-							<h5> ฿ 30,000 </h5>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="###">
-				<div class="w-3 pull">
-					<div class="item-card w-12">
-						<img src="" alt="" class="img">
-						<div class="item-description">
-							<div class="item-project">
-								<p>ตราสัญลักษณ์ โลโก้องกรณ์</p>
-							</div>
-							<div class="item-designer">
-								<p>by <a href="###">PunchilZ</a></p>
-							</div>
-						</div>
-						<div class="line"></div>
-						<div class="item-prize">
-							<h5> ฿ 30,000 </h5>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="###">
-				<div class="w-3 pull">
-					<div class="item-card w-12">
-						<img src="" alt="" class="img">
-						<div class="item-description">
-							<div class="item-project">
-								<p>ตราสัญลักษณ์ โลโก้องกรณ์</p>
-							</div>
-							<div class="item-designer">
-								<p>by <a href="###">PunchilZ</a></p>
-							</div>
-						</div>
-						<div class="line"></div>
-						<div class="item-prize">
-							<h5> ฿ 30,000 </h5>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="###">
-				<div class="w-3 pull">
-					<div class="item-card w-12">
-						<img src="" alt="" class="img">
-						<div class="item-description">
-							<div class="item-project">
-								<p>ตราสัญลักษณ์ โลโก้องกรณ์</p>
-							</div>
-							<div class="item-designer">
-								<p>by <a href="###">PunchilZ</a></p>
-							</div>
-						</div>
-						<div class="line"></div>
-						<div class="item-prize">
-							<h5> ฿ 30,000 </h5>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="###">
-				<div class="w-3 pull">
-					<div class="item-card w-12">
-						<img src="" alt="" class="img">
-						<div class="item-description">
-							<div class="item-project">
-								<p>ตราสัญลักษณ์ โลโก้องกรณ์</p>
-							</div>
-							<div class="item-designer">
-								<p>by <a href="###">PunchilZ</a></p>
-							</div>
-						</div>
-						<div class="line"></div>
-						<div class="item-prize">
-							<h5> ฿ 30,000 </h5>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="###">
-				<div class="w-3 pull">
-					<div class="item-card w-12">
-						<img src="" alt="" class="img">
-						<div class="item-description">
-							<div class="item-project">
-								<p>ตราสัญลักษณ์ โลโก้องกรณ์</p>
-							</div>
-							<div class="item-designer">
-								<p>by <a href="###">PunchilZ</a></p>
-							</div>
-						</div>
-						<div class="line"></div>
-						<div class="item-prize">
-							<h5> ฿ 30,000 </h5>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="###">
-				<div class="w-3 pull">
-					<div class="item-card w-12">
-						<img src="" alt="" class="img">
-						<div class="item-description">
-							<div class="item-project">
-								<p>ตราสัญลักษณ์ โลโก้องกรณ์</p>
-							</div>
-							<div class="item-designer">
-								<p>by <a href="###">PunchilZ</a></p>
-							</div>
-						</div>
-						<div class="line"></div>
-						<div class="item-prize">
-							<h5> ฿ 30,000 </h5>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="###">
-				<div class="w-3 pull">
-					<div class="item-card w-12">
-						<img src="" alt="" class="img">
-						<div class="item-description">
-							<div class="item-project">
-								<p>ตราสัญลักษณ์ โลโก้องกรณ์</p>
-							</div>
-							<div class="item-designer">
-								<p>by <a href="###">PunchilZ</a></p>
-							</div>
-						</div>
-						<div class="line"></div>
-						<div class="item-prize">
-							<h5> ฿ 30,000 </h5>
-						</div>
-					</div>
-				</div>
-			</a>
-			<a href="###">
-				<div class="w-3 pull">
-					<div class="item-card w-12">
-						<img src="" alt="" class="img">
-						<div class="item-description">
-							<div class="item-project">
-								<p>ตราสัญลักษณ์ โลโก้องกรณ์</p>
-							</div>
-							<div class="item-designer">
-								<p>by <a href="###">PunchilZ</a></p>
-							</div>
-						</div>
-						<div class="line"></div>
-						<div class="item-prize">
-							<h5> ฿ 30,000 </h5>
-						</div>
-					</div>
-				</div>
-			</a>
+		<div class="filter w-6">
+			<nav>
+				<ul>
+					<!-- <a href="searchProject.php?filter=10" <?php if($filter == 0)echo "id=\"active\""; ?>><li>หมวดหมู่</li></a> -->
+					<!-- <a href="searchProject.php?filter=1" <?php if($filter == 1)echo "id=\"active\""; ?>><li>สำหรับคุณ</li></a> -->
+					<!-- <a href="winnerProject.php?filter=2&category=<?php echo $category; ?>" <?php if($filter == 2)echo "id=\"active\""; ?>class="fr"><li>เงินรางวัลสูงสุด</li></a> -->
+					<a href="winnerProject.php?filter=3&category=<?php echo $category; ?>" <?php if($filter == 3)echo "id=\"active\""; ?>class="fr"><li>ผลงานล่าสุด</li></a>
+					<!-- <a href="searchProject.php?filter=4" <?php if($filter == 4)echo "id=\"active\""; ?>><li>ยอดนิยม</li></a> -->
+					<!-- <a href="searchProject.php?filter=5" <?php if($filter == 5)echo "id=\"active\""; ?>><li>สิ้นสุด</li></a> -->
+				</ul>
+			</nav>
 			
+		</div>
+
+	<div class="row cb">
+		<?php 
+			require 'connectDB.php';
+			$sql = "SELECT item_id,projects.project_name,user_name,category_name,item_concept,item_image,user_image,users.user_id,item_concept,prize_1st,prize_2nd,prize_3rd,item_1st,item_2nd,item_3rd
+			        FROM items
+			        LEFT JOIN projects
+			        ON projects.project_id = items.project_id
+			        LEFT JOIN users
+			        ON users.user_id = items.user_id
+			        LEFT JOIN categories
+			        ON categories.category_id = items.category_id
+			        WHERE items.category_id LIKE '%".$category."%'
+			        AND (items.item_id = projects.item_1st OR items.item_id = projects.item_2nd OR items.item_id = projects.item_3rd)
+			        ORDER BY item_id DESC
+			        ";
+			//echo $sql;
+			$result = $mysqli->query($sql);
+			if ($result->num_rows > 0) {
+			    while ($rows = $result->fetch_assoc()) {
+			    	$path = "img/items/";
+			    	$image = $path.$rows['item_image'];
+			    	//if($rows['item_id']==$rows['item_1st'] || $rows['item_id']==$rows['item_2nd'] || $rows['item_id']==$rows['item_3rd']){
+			    ?>
+						<a href="#id<?php echo $rows['item_id']; ?>" data-toggle="modal" data-target="#id<?php echo $rows['item_id']; ?>">
+							<div class="w-3 pull">
+								<div class="item-card w-12">
+									<div class="img">
+										<img src="<?php echo $image; ?>" alt="">
+									</div>
+									
+									<div class="item-description">
+										<div class="item-project">
+											<p><?php echo $rows['project_name'] ?></p>
+										</div>
+										<div class="item-designer">
+											<a href="profile.php?user_id_info=<?php echo $rows['user_id'] ?>">by <?php echo $rows['user_name'] ?></a>
+										</div>
+									</div>
+
+									<?php 
+										if($rows['item_id']==$rows['item_1st'])echo "<div class=\"line gold\"></div>";
+										else if($rows['item_id']==$rows['item_2nd'])echo "<div class=\"line silver\"></div>";
+										else if($rows['item_id']==$rows['item_3rd'])echo "<div class=\"line bronz\"></div>";
+										else echo "<div class=\"line fail\"></div>";
+									?>
+									<div class="line"></div>
+									<div class="item-prize">
+										<h5>
+										<?php 
+											if($rows['item_id']==$rows['item_1st'])echo "฿ ".number_format($rows['prize_1st'], 0, '.', ',');
+											else if($rows['item_id']==$rows['item_2nd'])echo "฿ ".number_format($rows['prize_2nd'], 0, '.', ',');
+											else if($rows['item_id']==$rows['item_3rd'])echo "฿ ".number_format($rows['prize_3rd'], 0, '.', ',');
+											else echo "--";
+										 ?>
+										</h5>
+									</div>
+								</div>
+							</div>
+						</a>
+						
+						<div id="id<?php echo $rows['item_id']; ?>" role="dialog" class="modal item-modal fade">
+						    <div class="container">
+
+						    	
+						    	<div class="w-12 detail">
+						    		<div class="modal-header">
+								  	 	<button type="button" class="close" data-dismiss="modal">&times;</button>	
+										<h4 class="modal-title"><?php echo $rows['project_name']; ?>
+											<?php 
+												if($rows['item_id']==$rows['item_1st'])echo "฿ ".number_format($rows['prize_1st'], 0, '.', ',');
+												else if($rows['item_id']==$rows['item_2nd'])echo "฿ ".number_format($rows['prize_2nd'], 0, '.', ',');
+												else if($rows['item_id']==$rows['item_3rd'])echo "฿ ".number_format($rows['prize_3rd'], 0, '.', ',');
+											 ?>
+										</h4>
+									</div>
+						    		<img src="<?php echo $image; ?>" alt="">
+						    		<p>แนวความคิด : <?php echo $rows['item_concept'] ?></p>
+									<div class="owner">
+										<a href="profile.php?user_id_info=<?php echo $rows['user_id'] ?>">
+							    			<img src="<?php echo $rows['user_image']; ?>" alt="">
+							    			<p><?php echo $rows['user_name']; ?></p>
+							    		</a>
+									</div>
+						    		
+						    	</div>
+						    	
+						    </div>
+						    <div class="container m-20">
+						    	<div class="w-12 comment">
+						    		<h5>Comment</h5>
+
+						    		<div class="image">
+						    			<img src="<?php echo $rows['user_image']; ?>" alt="">
+						    		</div>
+						    		<div class="w-5 send-comment">
+						    			<form action="" method="post">
+							    			<input class="input" type="text" placeholder="เขียนความคิดเห็น">
+							    			<input type="submit" value="ส่ง" class="btn btn-send">
+							    		</form>
+						    		</div>	
+
+									<div class="commented cb">
+										<div class="image">
+							    			<a href="###">
+							    				<img src="<?php echo $rows['user_image']; ?>" alt="">
+							    				PunchilZ
+							    			</a>
+							    		</div>
+							    		<div class="w-11">
+							    			<p>สวยมากๆแนวคิดก็ดี</p>
+							    		</div>	
+									</div>
+									<div class="commented cb">
+										<div class="image">
+							    			<a href="###">
+							    				<img src="<?php echo $rows['user_image']; ?>" alt="">
+							    				PunchilZ
+							    			</a>
+							    		</div>
+							    		<div class="w-11">
+							    			<p>สวยมากๆแนวคิดก็ดี</p>
+							    		</div>	
+									</div>
+									<div class="commented cb">
+										<div class="image">
+							    			<a href="###">
+							    				<img src="<?php echo $rows['user_image']; ?>" alt="">
+							    				PunchilZ
+							    			</a>
+							    		</div>
+							    		<div class="w-11">
+							    			<p>สวยมากๆแนวคิดก็ดี</p>
+							    		</div>	
+									</div>
+									<div class="commented cb">
+										<div class="image">
+							    			<a href="###">
+							    				<img src="<?php echo $rows['user_image']; ?>" alt="">
+							    				PunchilZ
+							    			</a>
+							    		</div>
+							    		<div class="w-11">
+							    			<p>สวยมากๆแนวคิดก็ดี</p>
+							    		</div>	
+									</div>
+									<div class="commented cb">
+										<div class="image">
+							    			<a href="###">
+							    				<img src="<?php echo $rows['user_image']; ?>" alt="">
+							    				PunchilZ
+							    			</a>
+							    		</div>
+							    		<div class="w-11">
+							    			<p>สวยมากๆแนวคิดก็ดี</p>
+							    		</div>	
+									</div>
+									
+
+
+						    			    		
+						    	</div>
+						    	
+						    </div>
+						    
+							</div>
+				<?php
+					//}
+			    }
+			}else{
+				//echo $sql;
+
+				echo "
+				<h3 class=\"cb\">ไม่พบผลงาน</h3>";
+			}
+			$mysqli->close();
+		 ?>
+
+<!-- 			<a href="###">
+				<div class="w-3 pull">
+					<div class="item-card w-12">
+						<img src="" alt="" class="img">
+						<div class="item-description">
+							<div class="item-project">
+								<p>ตราสัญลักษณ์ โลโก้องกรณ์</p>
+							</div>
+							<div class="item-designer">
+								<p>by <a href="###">PunchilZ</a></p>
+							</div>
+						</div>
+						<div class="line"></div>
+						<div class="item-prize">
+							<h5> ฿ 30,000 </h5>
+						</div>
+					</div>
+				</div>
+			</a> -->
 
 		</div>
 

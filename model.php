@@ -7,8 +7,12 @@
 	}else{
 		$user_email = $_SESSION['userLogin'];
 		require 'connectDB.php';
-			$sql = "SELECT user_id,user_name,user_email,user_image
+			$sql = "SELECT users.user_id,user_name,user_email,user_image,contact_detail,contact_name,user_detail
 	                FROM users
+	                LEFT JOIN user_contact
+	                ON users.user_id = user_contact.user_id
+	                LEFT JOIN contacts
+	                ON contacts.contact_id = user_contact.user_id
 	                WHERE user_email = '$user_email'
 	                LIMIT 1
 	                ";
@@ -19,7 +23,7 @@
 	                    array_push($userLogin,$get_users);
 	                }
 	            }else{
-	                //echo $sql;
+	                echo $sql;
 	            }
 	        $mysqli->close();
 
@@ -27,6 +31,5 @@
 
 	        $user_id = $userLogin['user_id'];
 	}
-	
 	
  ?>

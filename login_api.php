@@ -13,7 +13,7 @@
 	if ($result->num_rows > 0) {
 	    while ($rows = $result->fetch_assoc()) {
 	        $_SESSION['userLogin'] = $email;
-            header('Location: index.php');
+            header('Location: ./');
 	    }
 	}else{
 	    echo $sql;

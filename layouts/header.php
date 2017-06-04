@@ -10,18 +10,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title><?= $title ?></title>
+
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<header>
-		<a href="index.php"><div class="logo w-1 m0">CraftPrize</div></a>
+		<a href="index.php"><div class="logo w-1 m0">Craft Prize</div></a>
 		<nav>
 			<ul>
 				<a href="searchProject.php"><li class="fl" <?php if($title == "Search Project")echo "id=\"activeHead\"";?>>ค้นหาโครงการ</li></a>
-				<a href="createProject.php"><li class="fl" <?php if($title == "Create Project")echo "id=\"activeHead\"";?>>ประกาศโครงการ</li></a>
+				
 				<a href="winnerProject.php"><li class="fl" <?php if($title == "Winner Project")echo "id=\"activeHead\"";?>>ผลงานชนะเลิศ</li></a>
-				<a href="profile.php"><li class="fl" <?php if($title == "Profile")echo "id=\"activeHead\"";?>>นักออกแบบ</li></a>
+				<a href="searchDesigner.php"><li class="fl" <?php if($title == "Search Member")echo "id=\"activeHead\"";?>>ค้นหานักออกแบบ</li></a>
+
+				<a href="createProject.php"><li class="fl" <?php if($title == "Create Project")echo "id=\"activeHead\"";?>>ประกาศโครงการ</li></a>
 			</ul>
 		</nav>
 		<?php
@@ -51,7 +56,7 @@
 
 	    if(isset($_SESSION['userLogin'])){
 			//echo "<img src=\"$userImage\" alt=\"\">";
-			echo '<a href="###"><button class="btn w-12">Edit Profile</button></a>';
+			echo '<a href="profile.php"><button class="btn w-12">Edit Profile</button></a>';
 			echo '<a href="myProject.php"><button class="btn w-12">My Project</button></a>';
 	        echo '<a href="logout_api.php"><button class="btn w-12">Logout</button></a>';
 

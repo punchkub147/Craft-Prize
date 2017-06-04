@@ -18,11 +18,15 @@
 
 $c-main: #1c75bc;
 $c-card: #fff;
-$c-bg: #ebebeb;
-$c-text: #000;
+$c-bg: linear-gradient(to top, #E0EAFC , #CFDEF3);
+$c-text: #666;
 $c-subtext: #999;
 $c-img: #ccc;
-$c-footer: #aaa;
+$c-footer: #fff;
+
+$c-gold: #fbaf5d;
+$c-silver: #cccccc;
+$c-bronz: #a0410d;
 
 #facebook{background-color: #3b5998};
 
@@ -226,6 +230,13 @@ $c-footer: #aaa;
 .m0{
 	margin: 0;
 }
+.m-20{
+	margin: -20px auto;
+}
+.box-20{
+	width: 100%;
+	height: 20px;
+}
 
 .fl{float: left;}
 .fr{float: right;}
@@ -233,7 +244,8 @@ $c-footer: #aaa;
 .line{
 	width:100%;
 	height: 2px;
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(0,0,0,0.1);
+	box-sizing: border-box;
 }
 .m10{
 	margin: 10px 0;
@@ -242,31 +254,38 @@ $c-footer: #aaa;
 
 h1{
 	font-size: 36px;
+	color: $c-text;
 }
 h2{
 	font-size: 24px;
+	color: $c-text;
 }
 h3{
 	font-size: 24px;
+	color: $c-text;
 }
 h4{
 	font-size: 20px;
+	color: $c-text;
 }
 h5{
 	font-size: 18px;
+	color: $c-text;
 }
-h5{
+h6{
 	font-size: 16px;
+	color: $c-text;
 }
 p{
 	font-size: 14px;
+	color: $c-text;
 }
 a{
 	font-size: 14px;
 	color: $c-text;
 	text-decoration: none;
 }
-a:link a:visited a:hover a:active{
+a:link a:visited a:hover a:active a:focus{
 	text-decoration: none;
 	color: $c-text;
 }
@@ -285,18 +304,21 @@ a:link a:visited a:hover a:active{
 
 	border:none;
 	height: 40px;
-	line-height: 40px;
 	padding-right: 10px;
 	padding-left: 10px;
 	background-color: $c-main;
 	color: white;
 	cursor: pointer;
+	border-radius: 0;
 	@include shadow(1);
-}
+	padding: 0 20px;
+}	
 
 
 .btn:hover{
 	@include shadow(2);
+	color: white;
+	transition: all 0.1s ease-in-out;
 }
 
 .input{
@@ -309,6 +331,7 @@ a:link a:visited a:hover a:active{
 	//margin-bottom: 20px;
 	border: none;
 	@include shadow(1);
+	font-size: 14px;
 }
 textarea{
 	font-family: Sans-Serif;
@@ -338,6 +361,8 @@ textarea{
 	color: $c-text;
 	option{
 		color: $c-text;
+		font-size: 14px;
+		padding: 10px;
 	}
 }
 
@@ -349,12 +374,14 @@ textarea{
 label{
 	height: 38px;
 	line-height: 38px;
+	font-size: 14px;
+	color: $c-text;
 }
  
 body{
 	font-family: Helvetica, Arial, Sans-Serif;
 
-	background-color: $c-bg;
+	background: $c-bg;
 	position: relative;
 	min-height: 100vh;
 }
@@ -364,10 +391,40 @@ body{
 	@include shadow(1);
 }
 
+.gold{
+	border-top: 5px solid $c-gold;
+	box-sizing: border-box;
+}
+.silver{
+	border-top: 5px solid $c-silver;
+	box-sizing: border-box;
+}
+.bronz{
+	border-top: 5px solid $c-bronz;
+	box-sizing: border-box;
+}
+.fail{
+	border-top: 5px solid $c-card;
+	box-sizing: border-box;
+}
+
+.c-gold{
+	background-color: $c-gold;
+}
+.c-silver{
+	background-color: $c-silver;
+}
+.c-bronz{
+	background-color: $c-bronz;
+}
+.fail{
+	background-color: $c-card;
+}
+
 header{
 	width: 100%;
 	height: 56px;
-	background-color:$c-bg ;
+	background: $c-bg ;
 	@include shadow(2);
 	position: fixed;
 	z-index: 99;
@@ -390,6 +447,7 @@ header{
 		text-align: center;
 		background-color:$c-card ;
 		float: right;
+		box-shadow: -1px 0px 3px rgba(0,0,0,0.12), 0px 1px 2px rgba(0,0,0,0.24);
 	}
 	.logined{
 		position: relative;
@@ -400,6 +458,7 @@ header{
 		float: right;
 		padding-left: 50px;
 		box-sizing: border-box;
+		box-shadow: -1px 0px 3px rgba(0,0,0,0.12), 0px 1px 2px rgba(0,0,0,0.24);
 		img{
 			position: absolute;
 			width: 30px;
@@ -433,7 +492,7 @@ header{
     display: none; /* Hidden by default */
     opacity: 0;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 10; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -489,7 +548,7 @@ header{
 	height: 250px;
 	line-height: 250px;
 	text-align: center;
-	background-color: $c-bg;
+	background: none;
 	x-index: -1;
 	@include shadow(1);
 	h1{
@@ -502,7 +561,6 @@ header{
 	padding: 40px;
 	width: 100%;
 	height: 250px;
-	
 	text-align: center;
 	background-color: $c-card;
 	x-index: -1;
@@ -510,6 +568,9 @@ header{
 	@include shadow(1);
 	h3{
 		line-height: 50px;
+	}
+	.btn{
+		margin-top: 20px;
 	}
 }
 
@@ -526,6 +587,13 @@ header{
 		width: 100%;
 		height: 165px;
 		background-color: $c-img;
+		position: relative;
+		img{
+			width: 100%;
+			height: 165px;
+		}
+
+		
 	}
 	.item-description{
 		height: 80px;
@@ -533,6 +601,8 @@ header{
 		box-sizing: border-box;
 		.item-project{
 			line-height: 30px;
+			overflow: hidden;
+			height: 30px;
 		}
 		.item-designer{
 			line-height: 30px;
@@ -550,7 +620,172 @@ header{
 }
 .item-card:hover{
 	@include shadow(2);
-	transition: 0.3;
+	transition: all 0.1s ease-in-out;
+}
+
+.user-card{
+	box-sizing:border-box;
+	@include shadow(1);
+	float: left;
+	// margin-left: 10px;
+	// margin-right: 10px;
+	background-color: $c-card;
+	margin-bottom: 20px;
+
+	.img{
+		width: 100%;
+		height: 165px;
+		background-color: $c-img;
+		img{
+			width: 100%;
+			height: 165px;
+		}
+	}
+	.user-detail{
+		height: 50px;
+		padding: 10px;
+		box-sizing: border-box;
+		.img{
+			width: 30px;
+			height: 30px;
+			border-radius: 100%;
+			float: left;
+			margin-right: 10px;
+			img{
+				width: 100%;
+				height: 100%;
+				border-radius: 100%;
+			}
+		}
+		.user-name{
+			line-height: 30px;
+			overflow: hidden;
+			width: 50%;
+			height: 25px;
+			float: left;
+		}
+		.user-win{
+			line-height: 30px;
+			overflow: hidden;
+			height: 30px;
+			float: right;
+		}
+		
+	}
+	.user-prize{
+		height: 40px;
+		font-size: 24px;
+		line-height: 40px;
+		text-align: center;
+		font-weight: bold;
+	}
+	
+}
+.user-card:hover{
+	@include shadow(2);
+	transition: all 0.1s ease-in-out;
+
+}
+
+.item-modal{
+	.modal-header{
+		padding-left: 0;
+	}
+
+
+	.container{
+		padding: 0;
+		position: relative;
+	}
+	.detail{
+		@include shadow(3);
+		background-color: $c-card;
+		height: auto;
+		padding: 10px;
+		z-index: 800 ;
+
+		.btn-prize{
+			width: 33%;
+			margin-bottom: 10px;
+		}
+		.p1st{
+			background : $c-gold;
+		}
+		.p2nd{
+			background : $c-silver;
+		}
+		.p3rd{
+			background : $c-bronz;
+		}
+		
+		.image{
+			min-height: 300px;
+			background: $c-img;
+			margin-bottom: 10px;
+		}
+		img{
+			width: 100%;
+		}
+		p{
+			line-height: 30px;
+		}
+		.owner{
+			height: 30px;
+			img{
+				width: 30px;
+				height: 30px;
+				border-radius: 100%;
+				float: left;
+				margin-right: 10px;
+			}
+			p{
+				float: left;
+			}
+		}
+	}
+	.comment{
+		h5{
+			line-height: 50px;
+		}
+		@include shadow(3);
+		background-color: $c-card;
+		height: auto;
+		padding: 10px;
+		z-index: 800 ;
+		.image{
+			
+			box-sizing: border-box;
+			img{
+				width: 30px;
+				height: 30px;
+				border-radius: 100%;
+				float: left;
+				margin-right: 10px;
+			}
+			p{
+				float: left;
+				line-height: 30px;
+			}
+		}
+		.send-comment{
+			float: left;
+			position: relative;
+			margin-bottom: 20px;
+			.btn-send{
+				position: absolute;
+				padding: 0 20px;
+				top: 0;
+				right: 0px;
+			}
+		}
+		.commented{
+			padding: 10px 0;
+			p{
+				line-height: 30px;
+			}
+		}
+	}
+
 }
 
 .project-card{
@@ -568,6 +803,9 @@ header{
 		line-height: 30px;
 		float: left;
 		box-sizing: border-box;
+		p{
+			overflow: hidden;
+		}
 	}
 	.project-competitor{
 		line-height: 80px;
@@ -575,20 +813,50 @@ header{
 		text-align: center;
 		border-left: solid 2px #eee;
 		box-sizing:border-box;
+		.btn{
+			line-height: 40px;
+		}
 	}
 	.project-prize{
 		line-height: 80px;
 		float: left;
-		text-align: center;
+		text-align: right;
 		border-left: solid 2px #eee;
 		box-sizing:border-box;
+		padding-right: 20px;
 	}
 	.project-countdown{
+		padding: 10px;
+		line-height: 30px;
+		float: left;
+		box-sizing: border-box;
+		text-align: center;
+		border-left: solid 2px #eee;
+		p{
+			overflow: hidden;
+		}
+		.btn{
+			line-height: 40px;
+		}
+	}
+	.project-winner{
 		line-height: 80px;
 		float: left;
 		text-align: center;
 		border-left: solid 2px #eee;
 		box-sizing:border-box;
+		.btn{
+			line-height: 45px;
+			margin: 0;
+			width: 45px;
+			height: 45px;
+			padding: 0;
+			text-align: center;
+			img{
+				width: 100%;
+				box-sizing:border-box;
+			}
+		}
 	}
 }
 .project-head{
@@ -611,7 +879,59 @@ header{
 }
 .project-card:hover{
 	@include shadow(2);
-	transition: ease 0.3;
+	transition: all 0.1s ease-in-out;
+}
+.modal{
+	background-color: rgba(255,255,255,0.8);
+}
+.project-modal{
+	.modal-header{
+		padding-left: 0;
+	}
+
+	.container{
+		padding: 0;
+		position: relative;
+		height: 100vh;
+	}
+	.detail{
+		@include shadow(3);
+		background-color: $c-card;
+		height: auto;
+		padding: 10px;
+		z-index: 800 ;
+		box-sizing: border-box;
+	}
+	.poster{
+		min-height: 600px; 
+		background-color: $c-img;
+		img{
+			width: 100%;
+			background-color: $c-img;
+			@include shadow(1);
+		}
+		.input{
+		}
+	}
+	.item{
+		padding: 10px;
+		.input{
+			margin-bottom: 20px;
+		}
+		.input-textarea{
+			margin-bottom: 20px;
+		}
+		p{
+			line-height: 30px;
+		}
+		h6{
+			line-height: 40px;
+		}
+		.line{
+			margin: 10px 0;
+		}
+	
+	}
 }
 
 .search{
@@ -622,12 +942,14 @@ header{
 	}
 	.input:hover,.input:focus{
 		@include shadow(2);
+		transition: all 0.1s ease-in-out;
 	}
 }
 .btn-search{
 	position: absolute;
 	right: 0px;
 	top: 0;
+	padding: 0 20px;
 }
 .filter{
 	margin: 0 auto;
@@ -665,6 +987,10 @@ header{
 		height: 220px;
 		background-color: $c-img;
 		box-sizing: border-box;
+		img{
+			width: 100%;
+			height: 100%;
+		}
 	}
 	.name{
 		width: 100%;
@@ -701,6 +1027,63 @@ header{
 	float: left;
 	//margin-left: 15px;
 }
+
+
+.winner{
+	width: 100%;
+	height: 220px;
+	background: $c-card;
+	@include shadow(2);
+	border-box: box-sizing;
+	position: fixed;
+	z-index: 1;
+	.container{
+		width: 700px;
+	}
+	.prize{
+		width: 220px;
+		padding: 0 10px;
+		height: 165px;
+		float: left;
+		img{
+			width: 100%;
+			@include shadow(1);
+		}
+		.gold{
+			border-top: 5px solid $c-gold;
+		}
+		.silver{
+			border-top: 5px solid $c-silver;
+		}
+		.bronz{
+			border-top: 5px solid $c-bronz;
+		}
+		.prize-1st{
+			width: 100%;
+			text-align: center;
+			height: 30px;
+			line-height: 30px;
+			@include shadow(1);
+			background-color: $c-bg;
+		}
+	}
+}
+.winner-b{
+	width: 100%;
+	height: 220px;
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -753,3 +1136,4 @@ footer{
 }
 
 
+// -----------------------------------------

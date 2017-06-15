@@ -33,7 +33,7 @@
 				<ul>
 					<a href="winnerProject.php?filter=<?php echo $filter; ?>&category=" <?php if($category == "")echo "id=\"active\""; ?>class="fl"><li>All</li></a>
 					<a href="winnerProject.php?filter=<?php echo $filter; ?>&category=1" <?php if($category == 1)echo "id=\"active\""; ?>class="fl"><li>Logo</li></a>
-					<a href="winnerProject.php?filter=<?php echo $filter; ?>&category=2" <?php if($category == 2)echo "id=\"active\""; ?>class="fl"><li>Poster</li></a>
+					<a href="winnerProject.php?filter=<?php echo $filter; ?>&category=2" <?php if($category == 2)echo "id=\"active\""; ?>class="fl"><li>Model</li></a>
 					<a href="winnerProject.php?filter=<?php echo $filter; ?>&category=3" <?php if($category == 3)echo "id=\"active\""; ?>class="fl"><li>Mascot</li></a>
 				</ul>
 			</nav>
@@ -143,75 +143,70 @@
 						    <div class="container m-20">
 						    	<div class="w-12 comment">
 						    		<h5>Comment</h5>
-
 						    		<div class="image">
-						    			<img src="<?php echo $rows['user_image']; ?>" alt="">
+						    			<img src="<?php echo $userLogin['user_image']; ?>" alt="">
 						    		</div>
 						    		<div class="w-5 send-comment">
-						    			<form action="" method="post">
-							    			<input class="input" type="text" placeholder="เขียนความคิดเห็น">
-							    			<input type="submit" value="ส่ง" class="btn btn-send">
-							    		</form>
+						    			<?php 
+						    				if(isset($_SESSION['userLogin'])){
+						    			 ?>
+						    			<!-- <form action="" method="post"> -->
+							    			<input class="input" id="commenting<?php echo $rows['item_id']; ?>" type="text" placeholder="เขียนความคิดเห็น">
+							    			<!-- <input type="submit" value="ส่ง" class="btn btn-send"> -->
+							    		<!-- </form> -->
+							    		<?php 
+											}else{
+												echo "เข้าสู่ระบบเพื่อแสดงความคิดเห็น";
+											}
+							    		 ?>
 						    		</div>	
 
-									<div class="commented cb">
-										<div class="image">
-							    			<a href="###">
-							    				<img src="<?php echo $rows['user_image']; ?>" alt="">
-							    				PunchilZ
-							    			</a>
-							    		</div>
-							    		<div class="w-11">
-							    			<p>สวยมากๆแนวคิดก็ดี</p>
-							    		</div>	
-									</div>
-									<div class="commented cb">
-										<div class="image">
-							    			<a href="###">
-							    				<img src="<?php echo $rows['user_image']; ?>" alt="">
-							    				PunchilZ
-							    			</a>
-							    		</div>
-							    		<div class="w-11">
-							    			<p>สวยมากๆแนวคิดก็ดี</p>
-							    		</div>	
-									</div>
-									<div class="commented cb">
-										<div class="image">
-							    			<a href="###">
-							    				<img src="<?php echo $rows['user_image']; ?>" alt="">
-							    				PunchilZ
-							    			</a>
-							    		</div>
-							    		<div class="w-11">
-							    			<p>สวยมากๆแนวคิดก็ดี</p>
-							    		</div>	
-									</div>
-									<div class="commented cb">
-										<div class="image">
-							    			<a href="###">
-							    				<img src="<?php echo $rows['user_image']; ?>" alt="">
-							    				PunchilZ
-							    			</a>
-							    		</div>
-							    		<div class="w-11">
-							    			<p>สวยมากๆแนวคิดก็ดี</p>
-							    		</div>	
-									</div>
-									<div class="commented cb">
-										<div class="image">
-							    			<a href="###">
-							    				<img src="<?php echo $rows['user_image']; ?>" alt="">
-							    				PunchilZ
-							    			</a>
-							    		</div>
-							    		<div class="w-11">
-							    			<p>สวยมากๆแนวคิดก็ดี</p>
-							    		</div>	
-									</div>
-									
 
 
+									<!-- comment -->
+									 <div id="list-comment<?php echo $rows['item_id']; ?>"></div>
+									<!-- comment -->
+
+
+
+									 <script>
+
+									 	if($( "#commenting<?php echo $rows['item_id']; ?>" ).val() == ""){
+									 		$.ajax({
+												method: "POST",
+												url: "AjaxComment.php",
+												data: {
+													item_id: <?php echo $rows['item_id']; ?>,
+												}
+											})
+											.done(function( msg ) {
+												$("#list-comment<?php echo $rows['item_id']; ?>").html(msg)
+											});
+									 	}
+														
+										$( "#commenting<?php echo $rows['item_id']; ?>" ).keyup(function(e) {
+											if(e.which == 13){
+												//console.log('enter');
+												$.ajax({
+													method: "POST",
+													url: "AjaxComment.php",
+													data: {
+														comment_detail: $("#commenting<?php echo $rows['item_id']; ?>").val(),
+														item_id: <?php echo $rows['item_id']; ?>,
+														user_id: <?php echo $userLogin['user_id']; ?>
+													}
+												})
+												.done(function( msg ) {
+													$("#list-comment<?php echo $rows['item_id']; ?>").html(msg)
+												});
+
+												$( "#commenting<?php echo $rows['item_id']; ?>" ).val("");
+											}
+										 	
+										});
+
+
+									</script>
 						    			    		
 						    	</div>
 						    	
@@ -249,6 +244,8 @@
 					</div>
 				</div>
 			</a> -->
+
+
 
 		</div>
 

@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title><?= $title ?></title>
+	<title><?php echo $title; ?></title>
 
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	
@@ -25,18 +25,15 @@
 		<a href="index.php"><div class="logo w-1 m0">Craft Prize</div></a>
 		<nav>
 			<ul>
-				<a href="searchProject.php"><li class="fl" <?php if($title == "Search Project")echo "id=\"activeHead\"";?>>ค้นหาโครงการ</li></a>
-				
-				<a href="winnerProject.php"><li class="fl" <?php if($title == "Winner Project")echo "id=\"activeHead\"";?>>ผลงานชนะเลิศ</li></a>
-				<a href="searchDesigner.php"><li class="fl" <?php if($title == "Search Member")echo "id=\"activeHead\"";?>>ค้นหานักออกแบบ</li></a>
-
-				<a href="createProject.php"><li class="fl" <?php if($title == "Create Project")echo "id=\"activeHead\"";?>>ประกาศโครงการ</li></a>
+				<a href="backOffice.php"><li class="fl" >โครงการ</li></a>
+				<a href="backOffice2.php"><li class="fl" >ผลงาน</li></a>
+				<a href="backOffice3.php"><li class="fl" >สิทธิสมาชิก</li></a>
 			</ul>
 		</nav>
 		<?php
 		if(isset($_SESSION['userLogin'])){
 				?>
-					<a href="###" id="modal-btn-login"><div class="logined w-2 m0">
+					<a style="left: 0;" href="###" id="modal-btn-login"><div class="logined w-2 m0">
 					<img src="<?= $userLogin['user_image'] ?>">
 					<?= $userLogin['user_name'] ?>
 					</div></a>
@@ -135,3 +132,20 @@
 	    }
 	} 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

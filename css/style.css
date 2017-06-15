@@ -383,6 +383,10 @@ body {
   border-top: 5px solid #fff;
   box-sizing: border-box; }
 
+.b-gold {
+  border: 2px solid #fbaf5d;
+  box-sizing: border-box; }
+
 .c-gold {
   background-color: #fbaf5d; }
 
@@ -506,7 +510,7 @@ header {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
   .banner h1 {
     font-family: 'harlow_solid_italicitalic';
-    font-size: 50px;
+    font-size: 100px;
     color: #1c75bc; }
 
 .banner-news {
@@ -515,12 +519,32 @@ header {
   height: 250px;
   text-align: center;
   background-color: #fff;
+  background-image: url("../img/bg1.jpg");
+  background-position: center;
+  background-size: 100% auto;
   x-index: -1;
   box-sizing: border-box;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
   .banner-news h3 {
     line-height: 50px; }
   .banner-news .btn {
+    margin-top: 20px; }
+
+.banner-news2 {
+  padding: 40px;
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  background-color: #fff;
+  background-image: url("../img/bg2.jpg");
+  background-position: center;
+  background-size: 100% auto;
+  x-index: -1;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  .banner-news2 h3 {
+    line-height: 50px; }
+  .banner-news2 .btn {
     margin-top: 20px; }
 
 .item-card {
@@ -532,11 +556,12 @@ header {
   .item-card .img {
     width: 100%;
     height: 165px;
-    background-color: #ccc;
+    background-color: none;
     position: relative; }
     .item-card .img img {
       width: 100%;
-      height: 165px; }
+      height: 165px;
+      object-fit: contain; }
   .item-card .item-description {
     height: 80px;
     padding: 10px;
@@ -553,6 +578,15 @@ header {
     line-height: 40px;
     text-align: center;
     font-weight: bold; }
+  .item-card .item-delete {
+    height: 40px;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px; }
+    .item-card .item-delete .btn-delete {
+      background: red; }
 
 .item-card:hover {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -567,7 +601,7 @@ header {
   .user-card .img {
     width: 100%;
     height: 165px;
-    background-color: #ccc; }
+    background-color: none; }
     .user-card .img img {
       width: 100%;
       height: 165px; }
@@ -629,7 +663,7 @@ header {
     background: #a0410d; }
   .item-modal .detail .image {
     min-height: 300px;
-    background: #ccc;
+    background: none;
     margin-bottom: 10px; }
   .item-modal .detail img {
     width: 100%; }
@@ -646,6 +680,7 @@ header {
     .item-modal .detail .owner p {
       float: left; }
 .item-modal .comment {
+  margin-bottom: 200px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   background-color: #fff;
   height: auto;
@@ -675,6 +710,8 @@ header {
       right: 0px; }
   .item-modal .comment .commented {
     padding: 10px 0; }
+    .item-modal .comment .commented .image {
+      font-size: 12px; }
     .item-modal .comment .commented p {
       line-height: 30px; }
 
@@ -718,6 +755,14 @@ header {
       overflow: hidden; }
     .project-card .project-countdown .btn {
       line-height: 40px; }
+    .project-card .project-countdown .btn-delete {
+      line-height: 40px;
+      text-align: center;
+      background: red;
+      border: none;
+      color: white;
+      margin-left: 15px;
+      margin-top: 10px; }
   .project-card .project-winner {
     line-height: 80px;
     float: left;
@@ -772,10 +817,10 @@ header {
   box-sizing: border-box; }
 .project-modal .poster {
   min-height: 600px;
-  background-color: #ccc; }
+  background-color: none; }
   .project-modal .poster img {
     width: 100%;
-    background-color: #ccc;
+    background-color: none;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
 .project-modal .item {
   padding: 10px; }
@@ -829,7 +874,7 @@ header {
   .profile .display {
     width: 100%;
     height: 220px;
-    background-color: #ccc;
+    background-color: none;
     box-sizing: border-box; }
     .profile .display img {
       width: 100%;
@@ -912,6 +957,8 @@ footer {
       float: left; }
       footer .top .stat .count {
         font-size: 32px; }
+      footer .top .stat h3 {
+        line-height: 50px; }
     footer .top .register {
       float: right;
       margin-top: 10px; }

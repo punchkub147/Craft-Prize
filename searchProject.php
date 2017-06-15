@@ -26,7 +26,7 @@
 <div class="container">
 		<div class="search w-12">
 			<form action="searchProject.php?search=$search" method="">
-				<input type="text" class="input" name="search" placeholder="ค้นหาชื่อโครงการ">
+				<input type="text" class="input" id="searchProject" name="search" placeholder="ค้นหาชื่อโครงการ">
 				<input type="submit" value="ค้นหา" class="btn btn-search">
 			</form>
 		</div>
@@ -35,7 +35,7 @@
 				<ul>
 					<a href="searchProject.php?filter=<?php echo $filter; ?>&category=" <?php if($category == "")echo "id=\"active\""; ?>class="fl"><li>All</li></a>
 					<a href="searchProject.php?filter=<?php echo $filter; ?>&category=1" <?php if($category == 1)echo "id=\"active\""; ?>class="fl"><li>Logo</li></a>
-					<a href="searchProject.php?filter=<?php echo $filter; ?>&category=2" <?php if($category == 2)echo "id=\"active\""; ?>class="fl"><li>Poster</li></a>
+					<a href="searchProject.php?filter=<?php echo $filter; ?>&category=2" <?php if($category == 2)echo "id=\"active\""; ?>class="fl"><li>Model</li></a>
 					<a href="searchProject.php?filter=<?php echo $filter; ?>&category=3" <?php if($category == 3)echo "id=\"active\""; ?>class="fl"><li>Mascot</li></a>
 				</ul>
 			</nav>
@@ -68,6 +68,10 @@
 				<p>หมดเขต</p>
 			</div>
 		</div>
+
+
+		<div id="list-data" ></div>
+
 
 		<?php 
 		require 'connectDB.php';
@@ -128,8 +132,6 @@
 			    	$poster = $path.$rows['project_poster'];
 
 			    ?>
-
-
 					<a href="#id<?php echo $rows['project_id']; ?>" id="modal-btn-project" data-toggle="modal" data-target="#id<?php echo $rows['project_id']; ?>">
 						<div class="project-card w-12">
 							<div class="project-name w-6">
@@ -286,3 +288,23 @@
  <?php 
 	include('layouts/footer.php');
  ?>
+
+	<script>
+		
+		$( "#searchProject" ).keyup(function(e) {
+			if($( "#searchProject" ).val() != ""){
+				$.ajax({
+					method: "POST",
+					url: "AjaxSearchProject.php",
+					data: {
+						project_name: $("#searchProject").val(),
+					}
+				})
+				.done(function( msg ) {
+					$("#list-data").html(msg)
+				});
+			}
+		 	
+		});
+
+    </script>

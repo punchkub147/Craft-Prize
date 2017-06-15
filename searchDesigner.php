@@ -78,7 +78,7 @@
 			$sql = "SELECT users.user_id,user_name,user_image
 			        FROM users
 			        ".$filter."
-			        ORDER BY user_id DESC
+			        ORDER BY user_id ASC
 
 			        ";
 

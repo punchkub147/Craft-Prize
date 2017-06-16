@@ -15,7 +15,7 @@
 	if ($result->num_rows > 0) {
 	    while ($rows = $result->fetch_assoc()) {
 	        $_SESSION['userLogin'] = $email;
-
+	        $_SESSION['flash'] = array("Success Login","Email = $email");
 
             header('Location: '.$url);
 	    }
